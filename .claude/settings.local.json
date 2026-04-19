@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 merge_bib.py)",
+      "Bash(pdftotext \"/Users/ingmar/github/ingmarbib/new/Alessandroni_et_al_2025 - Flexible_behavior_or_flexible_methods.pdf\" -)",
+      "Bash(pdftotext \"/Users/ingmar/github/ingmarbib/new/MB2_KNOW_IG_stage2_preprint.pdf\" -)",
+      "Bash(python3 -c \"import pdfminer\")",
+      "Bash(python3 -c \"import pypdf; print\\('pypdf ok'\\)\")",
+      "Bash(python3 -c \"import PyPDF2; print\\('PyPDF2 ok'\\)\")",
+      "Bash(python3 -c \"import fitz; print\\('fitz ok'\\)\")",
+      "Bash(mdls \"/Users/ingmar/github/ingmarbib/new/MB2_KNOW_IG_stage2_preprint.pdf\")",
+      "Bash(grep -v \"^[^a-zA-Z]*$\")",
+      "Bash(grep -E \".{20,}\")",
+      "Bash(python3 -c \" import re, zlib with open\\('/Users/ingmar/github/ingmarbib/new/Alessandroni_et_al_2025 - Flexible_behavior_or_flexible_methods.pdf', 'rb'\\) as f: data = f.read\\(\\) chunks = re.finditer\\(rb'stream\\\\r?\\\\n\\(.*?\\)endstream', data, re.DOTALL\\) for chunk in chunks: try: dec = zlib.decompress\\(chunk.group\\(1\\)\\) text = dec.decode\\('latin-1', errors='replace'\\) for m in re.finditer\\(r'BT\\(.+?\\)ET', text, re.DOTALL\\): words = re.findall\\(r'\\\\\\(\\([^\\\\\\)]{3,}\\)\\\\\\)', m.group\\(1\\)\\) if words: line = ' '.join\\(words\\) if len\\(line\\) > 15: print\\(line[:200]\\) except: pass \")"
+    ]
+  }
+}
