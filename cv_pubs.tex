@@ -1,0 +1,125 @@
+%% cv_pubs.tex — formatted publication list for CV
+%% Source: ingmar.bib  (BibDesk, managed by Ingmar Visser)
+%%
+%% Compile with:  latexmk -pdf -bibtex cv_pubs
+%% Or simply:     make cv
+%%
+%% Rerunning after ingmar.bib changes is sufficient — no manual edits needed.
+%% (latexmk runs multiple passes, so reverse numbering converges automatically)
+
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=black, citecolor=black]{hyperref}
+\usepackage[style=apa, backend=biber, sorting=ydnt, maxnames=150]{biblatex}
+\usepackage{titlecaps}
+\Addlcwords{a an the of in on and for to with from by at as is are was were be been it its this that these those or but not into than do does via}
+\usepackage{totcount}   % track entry counts across passes for reverse numbering
+\addbibresource{ingmar.bib}
+
+\setcounter{biburlnumpenalty}{100}   % allow URL line breaks at digits
+
+%% ── Title case: capitalise main words (override APA apacase sentence-casing) ─
+%% APA style applies \MakeSentenceCase* via the apacase format; replace with
+%% \titlecap (titlecaps package) which capitalises all major words instead.
+\DeclareFieldFormat{apacase}{\titlecap{#1}}
+
+%% ── Bold family name "Visser" ────────────────────────────────────────────────
+%% \pdfstrcmp does a byte-level string comparison — fully reliable regardless
+%% of biblatex's internal token processing.
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \ifnum\pdfstrcmp{#1}{Visser}=0 \textbf{#1}\else#1\fi%
+}
+
+%% ── Suppress the note field in its default printed position ──────────────────
+%% (note is now free-form; status field drives WIP display and section routing)
+\DeclareFieldFormat{note}{}
+
+%% ── Year display: suppress disambiguation letter for @book; append status
+%%    field in bold (Work-in-Progress section only) ──────────────────────────────
+\newtoggle{shownote}
+
+\renewbibmacro*{labelyear+extradate}{%
+  \iffieldundef{labelyear}
+    {\iffieldundef{origyear}
+      {}
+      {\printtext[apadate]{\printorigdate}}}%
+    {\printtext[apadate]{%
+      \printfield{labelyear}%
+      \ifentrytype{book}{}{\printfield{extradate}}%   skip 'b','c' suffix for books
+      \iftoggle{shownote}{%
+        \iffieldundef{status}{}{%
+          \addcomma\addspace\mkbibbold{\thefield{status}}%
+        }%
+      }{}%
+    }}%
+}
+
+%% ── Section filters ──────────────────────────────────────────────────────────
+%% WIP: status defined and not "in press" (accepted papers list as publications)
+%% Published: status absent or "in press"
+\defbibcheck{isbook}{%
+  \ifentrytype{book}{}{\skipentry}%
+}
+
+\defbibcheck{inprogress}{%
+  \ifentrytype{book}{\skipentry}{}%
+  \iffieldundef{status}{\skipentry}{}%
+  \iffieldequalstr{status}{in press}{\skipentry}{}%
+}
+
+\defbibcheck{published}{%
+  \ifentrytype{book}{\skipentry}{}%
+  \iffieldundef{status}{}{%
+    \iffieldequalstr{status}{in press}{}{\skipentry}%
+  }%
+}
+
+%% ── Reverse-numbered bibliography environment ─────────────────────────────────
+%% Numbers count DOWN from the section total so that entry 1 = oldest.
+%% Totals are stored across LaTeX passes by totcount; latexmk converges in 2–3 runs.
+\newtotcounter{wiptot}    % total "work in progress" entries
+\newtotcounter{pubtot}    % total published entries
+
+\newtoggle{countwip}
+\newtoggle{countpub}
+
+\AtEveryBibitem{%
+  \iftoggle{countwip}{\stepcounter{wiptot}}{}%
+  \iftoggle{countpub}{\stepcounter{pubtot}}{}%
+}
+
+\newcounter{revnum}
+
+\defbibenvironment{revlist}
+  {\list{}%
+    {\setlength{\leftmargin}{2.5em}%
+     \setlength{\labelsep}{0.5em}%
+     \setlength{\labelwidth}{2em}%
+     \setlength{\itemsep}{\bibitemsep}%
+     \setlength{\parsep}{\bibparsep}}}
+  {\endlist}
+  {\item[\therevnum.]\addtocounter{revnum}{-1}}
+
+%% ─────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+\nocite{*}  % include all entries without explicit \cite commands
+
+\section*{Books}
+\printbibliography[check=isbook, heading=none]
+
+\section*{Work in Progress}
+\setcounter{revnum}{\totvalue{wiptot}}%
+\toggletrue{countwip}\toggletrue{shownote}%
+\printbibliography[check=inprogress, heading=none, env=revlist]%
+\togglefalse{countwip}\togglefalse{shownote}
+
+\section*{Publications}
+\setcounter{revnum}{\totvalue{pubtot}}%
+\toggletrue{countpub}%
+\printbibliography[check=published, heading=none, env=revlist]%
+\togglefalse{countpub}
+
+\end{document}
