@@ -1244,7 +1244,7 @@
       \verb https://doi.org/10.1525/collabra.160129
       \endverb
     \endentry
-    \entry{visser2026manybabies}{misc}{}{}
+    \entry{visser2026manybabies}{article}{}{}
       \name{author}{84}{}{%
         {{un=0,uniquepart=base,hash=477a2d4cbae37af4c4abefe378c804b6}{%
            family={Visser},
@@ -1751,9 +1751,6 @@
            giveni={C\bibinitperiod},
            givenun=1}}%
       }
-      \list{publisher}{1}{%
-        {Center for Open Science}%
-      }
       \strng{namehash}{99b2122b5837f4d7a45fa82881eed6eb}
       \strng{fullhash}{99b2122b5837f4d7a45fa82881eed6eb}
       \strng{fullhashraw}{99b2122b5837f4d7a45fa82881eed6eb}
@@ -1768,25 +1765,22 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{document}{preprint}
-      \field{status}{under review}
+      \field{document}{preprint: https://doi.org/10.31234/osf.io/ghrdt_v2; stage 2 registered report}
+      \field{journaltitle}{Developmental Science}
       \field{title}{ManyBabies 3: A Multi-Lab Study of Infant Algebraic Rule Learning}
+      \field{volume}{29}
       \field{year}{2026}
       \true{nocite}
+      \field{pages}{e70259}
+      \range{pages}{-1}
       \verb{doi}
-      \verb 10.31234/osf.io/ghrdt_v2
+      \verb 10.1111/desc.70259
       \endverb
       \verb{osf}
       \verb https://osf.io/kqu9v/
       \endverb
       \verb{repository}
       \verb https://github.com/manybabies/mb3-analysis-public
-      \endverb
-      \verb{urlraw}
-      \verb http://dx.doi.org/10.31234/osf.io/ghrdt_v2
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.31234/osf.io/ghrdt_v2
       \endverb
     \endentry
     \entry{zaharieva2026endogenous}{misc}{}{}
@@ -10688,7 +10682,7 @@
       \verb https://doi.org/10.1525/collabra.160129
       \endverb
     \endentry
-    \entry{visser2026manybabies}{misc}{}{}
+    \entry{visser2026manybabies}{article}{}{}
       \name{author}{84}{}{%
         {{un=0,uniquepart=base,hash=477a2d4cbae37af4c4abefe378c804b6}{%
            family={Visser},
@@ -11195,9 +11189,6 @@
            giveni={C\bibinitperiod},
            givenun=1}}%
       }
-      \list{publisher}{1}{%
-        {Center for Open Science}%
-      }
       \strng{namehash}{99b2122b5837f4d7a45fa82881eed6eb}
       \strng{fullhash}{99b2122b5837f4d7a45fa82881eed6eb}
       \strng{fullhashraw}{99b2122b5837f4d7a45fa82881eed6eb}
@@ -11212,25 +11203,22 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{document}{preprint}
-      \field{status}{under review}
+      \field{document}{preprint: https://doi.org/10.31234/osf.io/ghrdt_v2; stage 2 registered report}
+      \field{journaltitle}{Developmental Science}
       \field{title}{ManyBabies 3: A Multi-Lab Study of Infant Algebraic Rule Learning}
+      \field{volume}{29}
       \field{year}{2026}
       \true{nocite}
+      \field{pages}{e70259}
+      \range{pages}{-1}
       \verb{doi}
-      \verb 10.31234/osf.io/ghrdt_v2
+      \verb 10.1111/desc.70259
       \endverb
       \verb{osf}
       \verb https://osf.io/kqu9v/
       \endverb
       \verb{repository}
       \verb https://github.com/manybabies/mb3-analysis-public
-      \endverb
-      \verb{urlraw}
-      \verb http://dx.doi.org/10.31234/osf.io/ghrdt_v2
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.31234/osf.io/ghrdt_v2
       \endverb
     \endentry
     \entry{zaharieva2026endogenous}{misc}{}{}

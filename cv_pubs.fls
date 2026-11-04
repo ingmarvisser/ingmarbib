@@ -166,8 +166,8 @@ INPUT /Users/ingmar/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tf
 INPUT /Users/ingmar/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
 INPUT /Users/ingmar/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm
 INPUT /Users/ingmar/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm
-INPUT /Users/ingmar/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecrm0500.tfm
 INPUT /Users/ingmar/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /Users/ingmar/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecrm0500.tfm
 INPUT cv_pubs.aux
 INPUT ./cv_pubs.out
 INPUT ./cv_pubs.out

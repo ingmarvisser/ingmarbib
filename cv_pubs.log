@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.10)  4 NOV 2026 22:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.10)  4 NOV 2026 22:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -516,14 +516,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 111.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 111.
+ [1
 
-Overfull \hbox (1.32127pt too wide) in paragraph at lines 116--116
+{/Users/ingmar/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (1.32127pt too wide) in paragraph at lines 122--122
 [][]\T1/cmr/bx/n/10 Visser\T1/cmr/m/n/10 , I., Geamba[]u, A., Kacher-gis, G., Oliveira, C. M., Rocha-Hidalgo, J., Zetter-sten, M., Ahamat,
  []
 
-[1
-
-{/Users/ingmar/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] [7] (./cv_pubs.aux)
+[2] [3] [4] [5] [6] [7] (./cv_pubs.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
@@ -537,13 +537,13 @@ Package logreq Info: Writing requests to 'cv_pubs.run.xml'.
 Here is how much of TeX's memory you used:
  17697 strings out of 469097
  335191 string characters out of 5457524
- 1461342 words of memory out of 5000000
+ 1460662 words of memory out of 5000000
  46449 multiletter control sequences out of 15000+600000
  632255 words of font info for 46 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  74i,6n,79p,696b,5052s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/ingmar/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0500.600pk> </Users/ingmar/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/ingmar/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </Users/ingmar/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/ingmar/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk>
-Output written on cv_pubs.pdf (7 pages, 97390 bytes).
+Output written on cv_pubs.pdf (7 pages, 97385 bytes).
 PDF statistics:
  537 PDF objects out of 1000 (max. 8388607)
  333 compressed objects within 4 object streams
