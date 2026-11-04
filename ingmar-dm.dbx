@@ -1,0 +1,4 @@
+\DeclareDatamodelFields[type=field, datatype=literal]{status}
+\DeclareDatamodelFields[type=field, datatype=literal]{document}
+\DeclareDatamodelFields[type=field, datatype=verbatim]{repository}
+\DeclareDatamodelFields[type=field, datatype=verbatim]{osf}

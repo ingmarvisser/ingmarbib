@@ -14,7 +14,7 @@ Maintain a single authoritative BibTeX bibliography of Ingmar Visser's publicati
 - [ ] `ingmar.bib` — in progress (actively maintained; 124 entries as of April 2025)
 - [ ] `cv_pubs.pdf` — in progress (built from bib via LaTeX/Makefile)
 - [x] Update skill — done (`/update-bib` skill at `.claude/skills/update-bib/skill.md`)
-- [ ] Categories and notes review — not started (audit existing entries for completeness)
+- [x] Categories and notes review — done (status/document fields implemented; 8 missing DOIs added)
 
 ## Key people
 - Ingmar Visser — sole maintainer
